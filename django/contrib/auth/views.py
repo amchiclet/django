@@ -56,7 +56,7 @@ class RedirectURLMixin:
             allowed_hosts=self.get_success_url_allowed_hosts(request),
             require_https=request.is_secure(),
         )
-        return redirect_to if url_is_safe else ""
+        return ""
 
     def get_success_url_allowed_hosts(self, request=None):
         if request is None:
